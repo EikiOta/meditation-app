@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>瞑想アプリ</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="UI">
+        <h1>瞑想アプリ</h1>
+    </div>
+    <div class="timer">
+        <div id="count_up_timer">0:0:0</div>
+        <button id="stop_count_up_timer" onclick="clearInterval(timerVariable)"></button>
+    </div>
+    <div class="button-container">
+        <button type="button" id="start" onclick="breatheAnimation();" class="decolateButton"><i
+                class="fas fa-play">開始</i></button>
+        <button type="button" id="stop" onclick="location.reload();">終了</button>
+        <button type="button" id="changeBgm" onclick="changeMusic()">音楽切り替え</button>
+    </div>
+    <div class="container">
+        <div class="circle"></div>
+
+        <p id="text"></p>
+        <div class="pointer-container" id="movePointer">
+            <div class="pointer"></div>
+        </div>
+
+        <div class="outer-circle"></div>
+    </div>
+
+    <audio id="audio"></audio>
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

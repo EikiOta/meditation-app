@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+
+* {
+    /*font-family: 'Raleway', sans-serif;*/
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 350;
+}
+
+body {
+    height: 100vh;
+    background: url("./images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FAFAFA;
+}
+
+.container {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transform: scale(1);
+}
+
+h1 {
+    transform: translateY(150px);
+}
+
+#text {
+    font-size: 1.3rem;
+}
+
+.circle {
+    height: 100%;
+    width: 100%;
+    background-color: #212121;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.outer-circle {
+    height: 320px;
+    width: 320px;
+    background: conic-gradient(#556cb7 0%,
+            #4c59a4 40%,
+            #FAFAFA 40%,
+            #FAFAFA 60%,
+            #2c237e 60%,
+            #372379 100%);
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border-radius: 50%;
+    z-index: -2;
+}
+
+.pointer-container {
+    width: 20px;
+    height: 190px;
+    position: absolute;
+    top: -40px;
+    left: 140px;
+    transform-origin: bottom center;
+    animation: rotate 7500ms linear forwards infinite;
+    animation-play-state: paused;
+}
+
+.pointer {
+    width: 20px;
+    height: 20px;
+    background-color: #FAFAFA;
+    border-radius: 50%;
+}
+
+.container.grow {
+    animation: grow 3s linear forwards;
+}
+
+.container.shrink {
+    animation: shrink 3s linear forwards;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.UI {
+    position: absolute;
+    top: -150px;
+}
+
+
+
+
+ .button-container {
+    position: absolute;
+    top: 100px;
+
+} 
+
+/**/
+.timer {
+    position:relative;
+    top:50px;
+}
+
+#count_up_timer{
+	font-size: 30px;
+	font-weight: bold;
+	color: #FAFAFA;
+}
+#stop_count_up_timer{
+	background-color:#212121;
+	color:#FAFAFA
+}
