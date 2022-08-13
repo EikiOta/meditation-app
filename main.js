@@ -14,13 +14,13 @@ let changeBtn = document.getElementById("changeBgm");
 changeBtn.disabled = true;
 
 function breatheAnimation() {
-  text.innerHTML = "吸って";
+  text.innerHTML = "吸ってください";
   container.className = "container grow";
   setTimeout(() => {
-    text.innerHTML = "止めて！";
+    text.innerHTML = "止めてください";
 
     setTimeout(() => {
-      text.innerHTML = "吐いて";
+      text.innerHTML = "吐いてください";
       container.className = "container shrink";
     }, holdTime); // 3s + 1.5s= 4.5sたったら始まる
   }, breatheTime); //3sたったら始まる

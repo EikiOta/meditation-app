@@ -151,3 +151,9 @@ h1 {
 	background-color:#212121;
 	color:#FAFAFA
 }
+
+
+button {
+    border: solid 3px #333;
+    padding: 16px 72px;
+  }
